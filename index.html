@@ -15,22 +15,26 @@
     <title>Pokedex</title>
 </head>
 
-<body onload="loadAllpokemon()">
-    <div class="Background" id ="background"></div>
-    <header>
+<body onload="loadAllpokemon(), loadNames_inArray()">
+    <div class="Background" id="background" onclick="closePokemon()"></div>
+    <header id="top">
         <h1>POKEDEX</h1>
-        <input id="searchById"type="number" min="1" max="1008">
-        <button onclick="searchPokemon()">Search by ID</button>
+        <div class = "input">
+            <input id="searchById" type="number" min="1" max="1008" placeholder="ID">
+            <button onclick="searchPokemon_ById()">Search by ID</button>
+            <input id="searchName" type="text" placeholder="Name">
+            <button onclick="searchPokemon_ByName()">Search by Name</button>
+        </div>
     </header>
     <div class="allPokemon-Main" id="allPokemonMain"></div>
-    <footer id="footer"><button onclick="loadNextPokemons()">Load next 20 Pokemons</button></footer>
+
     <div class="show-pokemon" id="showPokemon">
-        <div class="pokemon-Img" id="pokemonImg">
-            <div class="back-ID">
-                <button class="back-Button" onclick="closePokemon()"><img src="img/arrow-left.ico">&nbsp;Pokedex</button>
-                <div class="back-ID-sub" id="backIDsub"></div>
-            </div>
+        <div class="pokemon-Img" id="pokemonImg"></div>
+        <div class="back-ID">
+            <button class="back-Button" onclick="closePokemon()"><img src="img/arrow-left.ico">&nbsp;Pokedex</button>
+            <div class="back-ID-sub" id="backIDsub"></div>
         </div>
+
         <div class="name" id="Name"></div>
         <div class="types" id="types"></div>
         <div class="weight-height">
@@ -76,7 +80,13 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+    <footer id="footer">
+        <button onclick="loadNextPokemons('20')">Load next 20 Pokemons</button>
+        <button onclick="loadNextPokemons('100')">Load next 100 Pokemons</button>
+        <button onclick="loadNextPokemons('all')">Load all (1008) Pokemons</button>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+    </footer>
 </body>
 
 </html>

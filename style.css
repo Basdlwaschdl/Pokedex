@@ -3,9 +3,13 @@ body {
     font-family: Roboto;
 }
 
+a {
+    text-decoration: none;
+}
+
 input {
     margin-left: 20px;
-    width: 50px;
+    width: 80px;
 }
 
 header {
@@ -42,7 +46,7 @@ p {
     z-index: 5;
     position: fixed;
     top: 110px;
-    left: 38%;
+    left: calc(50% - 200px);
     color: white;
     background-color: black;
     display: flex;
@@ -55,7 +59,12 @@ p {
     transform: scale(0.0);
 }
 
+.show-pokemon img {
+    width: 200px;
+}
+
 .back-Button {
+    background-color: transparent;
     font-size: large;
     font-weight: bold;
     border: none;
@@ -68,10 +77,9 @@ p {
 }
 
 .pokemon-Img {
-    height: 300px;
-    background-size: 230px;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding-top: 15px;
+    position: relative;
+    height: 240px;
     color: black;
     width: 100%;
     background-color: #F2F2F2;
@@ -83,6 +91,8 @@ p {
 }
 
 .back-ID {
+    color: black;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -168,7 +178,7 @@ p {
     align-items: center;
 }
 
-.BaseStats-sub span{
+.BaseStats-sub span {
     width: 50px;
 }
 
@@ -218,14 +228,43 @@ p {
 }
 
 .allPokemon img {
-
     width: 150px;
 }
 
 footer {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     height: 100px;
-    padding-left: 50px;
 }
 
+@media only screen and (max-width: 700px) {
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+input {
+    margin: 0;
+}
+
+header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+.show-pokemon {
+    width: 300px;
+    left: calc(50% - 150px);
+    top: 160px;
+}
+}
