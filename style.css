@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+input {
+    margin-left: 20px;
+    width: 50px;
+}
+
+header {
+    z-index: 1;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background-color: rgb(179, 179, 179, 0.9);
+    height: 100px;
+    position: sticky;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6)
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+p {
+    width: 50px;
+}
+
+.Background {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.show-pokemon {
+    z-index: 5;
+    position: fixed;
+    top: 110px;
+    left: 38%;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(0, 0, 0);
+    width: 400px;
+    border-radius: 52px;
+    transition: 0.3s;
+    transform: scale(0.0);
+}
+
+.back-Button {
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.back-Button:hover {
+    cursor: pointer;
+}
+
+.pokemon-Img {
+    height: 300px;
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.back-ID {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.back-ID-sub {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.back-ID-sub img:hover {
+    cursor: pointer;
+}
+
+.back-ID img {
+    width: 20px;
+}
+
+.name {
+    text-transform: capitalize;
+    margin: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+#typeSub0 {
+    text-transform: capitalize;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    border-radius: 13px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+#typeSub1 {
+    text-transform: capitalize;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    border-radius: 13px;
+    margin-left: 10px;
+    width: 50px;
+}
+
+.weight-height {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weight-height-sub {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weight-height-sub p {
+    color: gray;
+}
+
+.Base-stats-Headline {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.BaseStats-main {
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.BaseStats-sub {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.BaseStats-sub span{
+    width: 50px;
+}
+
+.stats {
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 90%;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.fill-Stats {
+    font-size: 12px;
+    padding: 4px 0px 4px 15px;
+    background-color: crimson;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
+
+.allPokemon-Main {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.allPokemon {
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 9px 12px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.allPokemon:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.allPokemon img {
+
+    width: 150px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding-left: 50px;
+}
+
